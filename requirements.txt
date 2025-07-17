@@ -1,0 +1,15 @@
+# Core Email & IMAP
+imap-tools
+mail-parser
+
+# OCR
+pytesseract
+Pillow   # for image processing (used by pytesseract)
+pdf2image # for converting PDFs to images
+
+# Environment variables
+python-dotenv
+
+# General
+requests
+
