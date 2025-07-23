@@ -5,6 +5,8 @@ from PIL import Image
 import pytesseract
 from dotenv import load_dotenv
 from collections import defaultdict
+import smtplib                     
+from email.message import EmailMessage  
 
 
 load_dotenv()
@@ -101,7 +103,44 @@ def validate_documents(detected_docs, candidate_email="unknown@example.com"):
         print(f"Missing documents for {candidate_email}: {missing_docs}")
     else:
         print(f"All required documents received for {candidate_email}")
+
+    send_missing_docs_email(candidate_email, missing_docs)
     return candidate_record
+
+def send_missing_docs_email(to_email, missing_docs):
+
+    if not missing_docs:
+        return
+    
+    msg = EmailMessage()
+    msg["Subject"] = "Missing Documents for Your Application"
+    msg["From"] = EMAIL  
+    msg["To"] = to_email
+
+    missing_list = "\n".join(f"-{doc}" for doc in missing_docs)
+    msg.set_content(f"""\
+Hi,
+
+Thank you for your application. However, we noticed that the following required documents are missing:
+
+{missing_list}
+
+Please submit these documents within the next 3 days to complete your application.
+
+Regards,  
+Team Ridipt
+    
+"""
+    )
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(EMAIL, PASSWORD)
+            smtp.send_message(msg)
+        print(f"Sent email to {to_email} for missing documents.")
+    except Exception as e:
+        print(f"Failed to send email to {to_email}: {e}") 
+
+
 
 
 
