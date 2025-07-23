@@ -69,6 +69,6 @@ with tab3:
 
 st.markdown(
     "<hr style='margin-top:2em;margin-bottom:1em'>"
-    "<center><small>© 2024 Candidate Docs Dashboard</small></center>",
+    "<center><small>© 2025 Ridipt Candidate Docs Dashboard</small></center>",
     unsafe_allow_html=True
 )

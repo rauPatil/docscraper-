@@ -12,7 +12,7 @@ IMAP_SERVER = os.getenv("IMAP_SERVER", "imap.gmail.com")
 def check_inbox(attachment_senders):
     print("Connecting to inbox...")
     with MailBox(IMAP_SERVER).login(EMAIL, PASSWORD) as mailbox:
-        for msg in mailbox.fetch(AND(seen=True)):
+        for msg in mailbox.fetch(AND(seen=F)):
             print(f"\nFrom: {msg.from_}")
             print(f"Subject: {msg.subject}")
             save_attachments(msg, sender=msg.from_, attachment_senders=attachment_senders)
