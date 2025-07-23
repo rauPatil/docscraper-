@@ -97,7 +97,7 @@ streamlit run app.py
 ##  Data Storage
 
 - Candidate records are saved in a CSV file by default  
-- Can be integrated with **Baserow** or any database of your choice later
+- Can be integrated with **Baserow** or any database of our choice later
 
 ---
 
@@ -127,7 +127,7 @@ A future version may include a secure portal where candidates can directly uploa
 
 ##  Built With
 
-- Python 🐍  
+- Python 3.13.2 🐍  
 - Streamlit 🌐  
 - Gmail (IMAP + SMTP) 📬  
 - Tesseract OCR 🧠  
