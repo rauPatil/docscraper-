@@ -8,12 +8,12 @@ A simple and easy-to-use dashboard (built with Streamlit) lets even non-technica
 
 ## Features
 
-- 📥 Automatically reads unread Gmail inbox emails  
-- 📎 Downloads attachments and extracts text using OCR  
-- 🧠 Detects document types (Resume, ID, Education Certificate, etc.)  
-- 📧 Sends up to 3 polite follow-up emails for missing documents  
-- 🗂️ Saves candidate info (email, documents received/missing, reminders sent) to CSV or database  
-- 🖥️ Streamlit dashboard to view and control everything  
+-  Automatically reads unread Gmail inbox emails  
+-  Downloads attachments and extracts text using OCR  
+-  Detects document types (Resume, ID, Education Certificate, etc.)  
+-  Sends up to 3 polite follow-up emails for missing documents  
+-  Saves candidate info (email, documents received/missing, reminders sent) to CSV or database  
+-  Streamlit dashboard to view and control everything  
 
 ---
 
@@ -53,7 +53,7 @@ IMAP_SERVER=imap.gmail.com
 
 ---
 
-## 📹 How to Set Up Gmail App Password
+## How to Set Up Gmail App Password
 
 🎥 **https://youtube.com/shorts/WDfvVRVV8Js?si=CgtZfQ4ToNSKwS7o**
 
@@ -69,7 +69,7 @@ IMAP_SERVER=imap.gmail.com
 
 ---
 
-## ▶️ How to Run the App
+##  How to Run the App
 
 ### Run the backend email processor:
 
@@ -85,7 +85,7 @@ streamlit run app.py
 
 ---
 
-## 🧑‍💻 Streamlit Dashboard Tabs
+##  Streamlit Dashboard Tabs
 
 -  **Start/Stop Automation** button  
 -  **All Candidates**: Shows all candidate records  
@@ -101,7 +101,7 @@ streamlit run app.py
 
 ---
 
-## 🔮 Future Scope
+##  Future Scope
 
 ### 1. AI-Powered Document Classification
 
@@ -125,7 +125,7 @@ A future version may include a secure portal where candidates can directly uploa
 
 ---
 
-## 🙌 Built With
+##  Built With
 
 - Python 🐍  
 - Streamlit 🌐  
